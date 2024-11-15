@@ -1,3 +1,48 @@
+// Begin reset
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+// End reset
+
 body {
   max-width: 1000px;
   margin: 0 auto;
@@ -5,11 +50,26 @@ body {
   font-optical-sizing: auto;
 }
 header {
+  margin: 2em;
   text-align: center;
 }
-section {
-  max-width: 800px;
+footer {
   margin: 2em auto;
+  max-width: 800px;
+  padding: 2em 4em;
+  border-top: 1px solid #000000;
+
+  .copyright, .contact {
+    font-size: 12px;
+  }
+  .contact {
+    float:right;
+  }
+}
+section {
+  margin: 2em auto 4em auto;
+  padding: 0 4em;
+  max-width: 800px;
 }
 hr {
   margin-block-start: 4em;
@@ -22,7 +82,6 @@ hr {
 }
 .family-photo{
   text-align: center;
-  background-image: url("../images/family.png")
 }
 .wilds-now-link {
   display: inline-block;
